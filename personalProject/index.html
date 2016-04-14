@@ -6,14 +6,21 @@
     <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   <body ng-controller="mainCtrl">
-    <ul>
-        <li><a ui-sref='home'>Home</a></li>
-        <li><a ui-sref='notes'>User Notes</a></li>
-        <li><a ui-sref='adv'>Advanced Options</a></li>
-    </ul>
-        {{name}}
+    {{name}}
+
+    <div class="header">
+      <h1 class="header-text">Name Maker</h1>
+    </div>
+    <div class="link-line">
+      <span class="header-link"><a ui-sref='home'>Home</a></span>
+      <span class="header-link"><a ui-sref='generator'>Name Generator</a></span>
+      <span class="header-link"><a ui-sref='notes'>User Notes</a></span>
+    </div>
+
     <ui-view></ui-view>
-    <div class="square">Hello</div>
+
+  <div class="footer"></div>
+
 
 
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
@@ -21,6 +28,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
     <script src="js/app.js"></script>
     <script src="js/mainCtrl.js"></script>
-
+    <script src="js/myService.js"></script>
   </body>
 </html>

@@ -1,0 +1,118 @@
+CSS --
+
+/*.dropdown dd { position:relative; }*/
+/* DT styles for sliding doors */
+/*.dropdown dt a {background:#e4dfcb url(arrow.png) no-repeat scroll right center;
+    display:block; padding-right:20px; border:1px solid #d4ca9a; width:150px;}
+.dropdown dt a span {cursor:pointer; display:block; padding:5px;}*/
+/* UL styles */
+/*.dropdown dd ul { background:#e4dfcb none repeat scroll 0 0; display:none;
+    list-style:none; padding:5px 0px; position:absolute;
+    left:0px; top:2px; width:auto; min-width:170px;}
+.dropdown span.value { display:none;}
+.dropdown dd ul li a { padding:5px; display:block;}*/
+
+<!-- <dl class="dropdown">
+  <dt><a href="#"><span>Select a Country</span></a></dt>
+    <dd>
+
+          <ul>
+            <li><a href="#">Brazil<span class="value">BR</span></a></li>
+            <li><a href="#">France<span class="value">FR</span></a></li>
+            <li><a href="#">Germany<span class="value">DE</span></a></li>
+            <li><a href="#">India<span class="value">IN</span></a></li>
+            <li><a href="#">Japan<span class="value">JP</span></a></li>
+            <li><a href="#">Serbia<span class="value">CS</span></a></li>
+            <li><a href="#">United Kingdom<span class="value">UK</span></a></li>
+            <li><a href="#">United States<span class="value">US</span></a></li>
+        </ul>
+    </dd> -->
+<!-- </dl>
+
+<dl>
+<dd>
+<dt><span>Select a Country</span></dt>
+<li>Hello</li>
+<li>Yo</li>
+</dd>
+
+</dl> -->
+
+<!-- <table class="dropdown">This is a table
+    <tr>
+      <td><span>A<span></td>
+      <td><span>A<span></td>
+      <td><span>A<span></td>
+      <td><span>A<span></td>
+      <td><span>A<span></td>
+      <td><span>A<span></td>
+      <td><span>A<span></td>
+    </tr>
+    <tr>
+      <td>H</td>
+      <td>I</td>
+      <td>J</td>
+      <td>K</td>
+      <td>L</td>
+      <td>M</td>
+      <td>N</td>
+    </tr>
+    <tr>
+      <td>O</td>
+      <td>P</td>
+      <td>Q</td>
+      <td>R</td>
+      <td>S</td>
+      <td>T</td>
+      <td>U</td>
+    </tr>
+    <tr>
+      <td>V</td>
+      <td>W</td>
+      <td>X</td>
+      <td>Y</td>
+      <td>Z</td>
+      <td></td>
+      <td></td>
+    </tr>
+  </table> -->
+
+<!-- <div class="square">Hello</div> -->
+
+//
+//
+// console.log(randomLetter(vowels, 5, 2));
+
+// $(".dropdown dt a").click(function() {
+//     $(".dropdown dd ul").toggle();
+// });
+//
+// $(".dropdown dd ul li a").click(function() {
+//     var text = $(this).html();
+//     $(".dropdown dt a span").html(text);
+//     $(".dropdown dd ul").hide();
+// });
+//
+// $(document).bind('click', function(e) {
+//     var $clicked = $(e.target);
+//     if (! $clicked.parents().hasClass("dropdown"))
+//         $(".dropdown dd ul").hide();
+// });
+
+ // This is a break
+
+// $(".dropdown table span").click(function() {
+//     $(".dropdown tr td").toggle();
+// });
+//
+// $(".dropdown dd ul li a").click(function() {
+//     var text = $(this).html();
+//     $(".dropdown dt a span").html(text);
+//     $(".dropdown dd ul").hide();
+// });
+//
+// $(document).bind('click', function(e) {
+//     var $clicked = $(e.target);
+//     if (! $clicked.parents().hasClass("dropdown"))
+//         $(".dropdown dd ul").hide();
+});

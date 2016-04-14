@@ -10,8 +10,8 @@ angular.module("nameMaker", ['ui.router'])
           url: "/notes",
           templateUrl: "routes/notesTem.html"
         })
-        .state("adv", {
-          url: "/advanced",
-          templateUrl: "routes/advTem.html"
+        .state("generator", {
+          url: "/generator",
+          templateUrl: "routes/generatorTem.html"
         })
     });
