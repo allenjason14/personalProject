@@ -1,12 +1,11 @@
 angular.module('nameMaker').controller("mainCtrl", function($scope, randomService){
-  $scope.name = "Jason";
-
-  $scope.newName = randomService.newName;
-  $scope.nameList = randomService.nameList;
-  $scope.logTrack = randomService.logTrack;
-  $scope.randomName = function(letter, iter){
-    console.log("hit")
-    $scope.result = randomService.randomName(letter, iter);
+  $scope.nameList = [];
+  $scope.randomName = function(letter, iter, nameList){
+    $scope.result = randomService.randomName(letter, iter, nameList);
   }
 
+  $scope.clearList = function(){
+    $scope.result = [];
+    $scope.nameList = [];
+  }
 });

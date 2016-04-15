@@ -12,6 +12,6 @@ angular.module("nameMaker", ['ui.router'])
         })
         .state("generator", {
           url: "/generator",
-          templateUrl: "routes/generatorTem.html"
+          templateUrl: "routes/generatorTem.html",
         })
     });

@@ -3,13 +3,10 @@ angular.module("nameMaker").service('randomService', function(){
   var alphabet = [["b", "d", "f", "g", "h", "j", "k", "l", "m", "n", "p", "q", "r", "s", "t", "v", "w", "x", "z"],
      ["a", "e", "i", "o", "u", "y"]];
 
-  this.newName = [];
-  this.nameList = [];
-  this.logTrack = [];
-
-
-   this.randomName = function(num, iter){
+   this.randomName = function(num, iter, nameList){
+     this.newName = [];
       if(!isNaN(num) && !isNaN(iter)) {
+        this.logTrack = [];
         for(var j = 0; j < iter; j++){
           for(var i = 0; i < num; i++) {
             var aNum;
@@ -46,11 +43,11 @@ angular.module("nameMaker").service('randomService', function(){
           var rawName = this.newName.join('');
           var finalName = rawName.charAt(0).toUpperCase() + rawName.substring(1);
           finalName.charAt(0).toUpperCase();
-          this.nameList.push(finalName);
+          nameList.push(finalName);
           this.newName = [];
         }
-        console.log("done");
-      return this.nameList;
+        console.log(nameList);
+      return nameList;
     }
   }
 

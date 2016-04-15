@@ -46,13 +46,22 @@ html {
   text-decoration:underline;
 }
 
+.text-holder {
+  min-height: 10em;
+  width: 40%;
+  display: inline-block;
+  margin-left:5%;
+  margin-right: 7%;
+  border:2px solid black;
+}
+
 .name-placer {
-  width: 80%;
-  height: 10em;
-  margin-left: auto;
-  margin-right: auto;
+  width: 40%;
+  display:inline-block;
+  min-height: 10em;
   border: double 3px black;
-  }
+  margin-right: 5%;
+}
 
 .footer {
 
@@ -62,5 +71,10 @@ html {
     background-image: url("images/headerfooterimage.jpg");
     position:absolute;
     bottom:0;
-  }
+}
+
+.results{
+  text-align: center;
+  font-size:14pt;
+  font-family: sans-serif;
 }
