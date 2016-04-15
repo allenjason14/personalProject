@@ -46,9 +46,7 @@ angular.module("nameMaker").service('randomService', function(){
           nameList.push(finalName);
           this.newName = [];
         }
-        console.log(nameList);
       return nameList;
     }
   }
-
 });

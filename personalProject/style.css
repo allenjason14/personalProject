@@ -69,12 +69,15 @@ html {
     height: 4em;
     border-top: gray solid .5em;
     background-image: url("images/headerfooterimage.jpg");
-    position:absolute;
-    bottom:0;
-}
+  }
 
 .results{
   text-align: center;
   font-size:14pt;
   font-family: sans-serif;
+}
+
+.little-button{
+  width:1em;
+  height: 1em;
 }
