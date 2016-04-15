@@ -1,3 +1,9 @@
 <h2> Name Generator </h2>
 
-<div class="name-placer"></div>
+<div class="name-placer">
+  <div><div>
+</div>
+<input ng-model="letterInput"></input>
+<input ng-model="iterInput"></input>
+<button ng-click="randomName(letterInput, iterInput)">
+  {{result}}
