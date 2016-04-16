@@ -1,4 +1,4 @@
-angular.module("nameMaker").controller("genCtrl", function($scope, randomService){
+angular.module("nameMaker").controller("genCtrl", function($scope, randomService, passService){
 
   $scope.randomName = function(letter, iter, nameList){
     $scope.nameList = randomService.randomName(letter, iter, nameList);
@@ -7,4 +7,7 @@ angular.module("nameMaker").controller("genCtrl", function($scope, randomService
   $scope.clearList = function(){
     $scope.nameList = [];
   }
+
+  $scope.moveName = passService.moveName();
+
 })
