@@ -40,7 +40,7 @@ angular.module("nameMaker").controller('notesCtrl', function($scope, notesServic
 
   $scope.activateNames = function(num) {
     $scope.$parent.usedNames.push($scope.$parent.savedNames[num]);
-    $scope.$parent.savedNames.splice($scope.$parent.savedNames[num, 1]);
+    $scope.$parent.savedNames.splice($scope.$parent.savedNames[num], 1);
     setTimeout(function(){
       $(".chosen-names").draggable();
     },300);
