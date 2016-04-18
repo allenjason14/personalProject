@@ -1,4 +1,5 @@
-angular.module("nameMaker").controller('notesCtrl', function($scope, passService){
+angular.module("nameMaker").controller('notesCtrl', function($scope){
+
 
 
 

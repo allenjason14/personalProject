@@ -1,13 +1,15 @@
-angular.module("nameMaker").controller("genCtrl", function($scope, randomService, passService){
+angular.module("nameMaker").controller("genCtrl", function($scope, randomService){
 
   $scope.randomName = function(letter, iter, nameList){
     $scope.nameList = randomService.randomName(letter, iter, nameList);
   }
 
   $scope.clearList = function(){
-    $scope.nameList = [];
+    $scope.$parent.nameList = [];
   }
 
-  $scope.moveName = passService.moveName();
+  $scope.moveNames = function(num) {
+    $scope.$parent.savedNames.push($scope.$parent.nameList[num]);
+  }
 
-})
+});

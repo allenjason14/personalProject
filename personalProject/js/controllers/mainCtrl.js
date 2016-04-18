@@ -1,4 +1,4 @@
-angular.module('nameMaker').controller("mainCtrl", function($scope, randomService, passService){
+angular.module('nameMaker').controller("mainCtrl", function($scope, randomService){
   $scope.nameList = [];
   $scope.savedNames = [];
 

@@ -8,7 +8,8 @@ angular.module("nameMaker", ['ui.router'])
         })
         .state("notes", {
           url: "/notes",
-          templateUrl: "routes/notesTem.html"
+          templateUrl: "routes/notesTem.html",
+          controller: "notesCtrl"
         })
         .state("generator", {
           url: "/generator",
