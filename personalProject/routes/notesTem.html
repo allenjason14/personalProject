@@ -7,7 +7,7 @@
   <button ng-click="activateNames($index)"></button>
 </div>
 
-</hr>
+<hr>
 
 <h3>Active Names:</h3>
 
@@ -21,7 +21,9 @@
     <div class="draggable-saved">{{used}}
       <input placeholder="Edits" ng-model="editedName"></input>
       <button ng-click="editName(editedName, $index)"></button>
-      <button ng-click="removeSavedName($index)"></index>
+      <button ng-click="removeSavedName($index)"></button>
+      <button ng-click="notesVis()"></button>
+      <input class="notes-visible"></input>
     </div>
 </span>
 </span>

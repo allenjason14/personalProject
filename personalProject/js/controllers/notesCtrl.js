@@ -1,5 +1,15 @@
 angular.module("nameMaker").controller('notesCtrl', function($scope, notesService){
 
+
+$(document).on("click", ".chosen-names" ,function(){
+  if($(this).children().children(".notes-visible").css("visibility") === "hidden") {
+  $(this).children().children(".notes-visible").css({visibility: 'visible'})
+}
+else{
+  $(this).children().children(".notes-visible").css({visibility: 'hidden'})
+}
+})
+
   $scope.addCategory = function(input){
     if($scope.$parent.newCategory.indexOf(input) === -1){
       $scope.$parent.newCategory.push(input);

@@ -86,3 +86,7 @@ html {
   border: 3px solid yellow;
   z-index: 10;
 }
+
+.notes-visible{
+  visibility: hidden;
+}
