@@ -1,6 +1,30 @@
 <h2> User Notes </h2>
 
-<div class="list-holder"></div>
-<div class="chosen-names" ng-repeat="saved in savedNames">{{saved}}
-  <input></input>
+<input placeholder="Add a Name" ng-model="newName"></input>
+  <button ng-click="addName(newName)"></button>
+<input placeholder="Add a Category" ng-model="newCat"></input>
+  <button ng-click="addCategory(newCat)"></button>
+
+<div class="list-holder">
+  <div class="chosen-names" ng-repeat="saved in savedNames">{{saved}}
+    <input placeholder="Edits" ng-model="editedName"></input>
+    <button ng-click="editName(editedName, $index)"></button>
+    <button ng-click="removeSavedName($index)"></index>
 </div>
+</div>
+
+<div class="cat-holder">
+  <div class="cat-names" ng-repeat="cat in newCategory">{{cat}}
+    <button ng-click="removeCategory($index)"></index>
+  </div>
+</div>
+
+<!-- <div class='toggle_parent'>
+  <div class='toggleHolder'>
+    <span class='toggler'>Open</span>
+    <span class='toggler' style='display:none;'>Close</span>
+  </div>
+  <div class='toggled_content' style='display:none;'>
+      My Content
+  </div>
+</div> -->

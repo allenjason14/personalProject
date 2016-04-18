@@ -4,8 +4,8 @@ angular.module("nameMaker").service('randomService', function(){
      ["a", "e", "i", "o", "u", "y"]];
 
    this.randomName = function(num, iter, nameList){
-     this.newName = [];
       if(!isNaN(num) && !isNaN(iter)) {
+        this.newName = [];
         this.logTrack = [];
         for(var j = 0; j < iter; j++){
           for(var i = 0; i < num; i++) {
@@ -46,6 +46,10 @@ angular.module("nameMaker").service('randomService', function(){
           nameList.push(finalName);
           this.newName = [];
         }
+      return nameList;
+    }
+    else {
+      alert("Please enter valid numbers.")
       return nameList;
     }
   }
