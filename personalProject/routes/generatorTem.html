@@ -4,7 +4,7 @@
     <p> This is a paragraph </p>
   </div>
   <div class="name-placer">
-    <div class="results" ng-repeat="name in nameList">{{name}} 
+    <div class="results" ng-repeat="name in nameList">{{name}}
     <button ng-click="moveNames($index)" class="little-button"></button>
     <button ng-click="removeName($index)" class="little-button"></button>
     <hr>
@@ -16,4 +16,6 @@
   <input ng-model="iterInput"></input>
   <button ng-click="randomName(letterInput, iterInput, nameList)">Select</button>
   <button ng-click="clearList()">Clear</button>
+  <button class="advanced-link"><a ui-sref='advanced'>Advanced Options</a></button>
+
 </div>

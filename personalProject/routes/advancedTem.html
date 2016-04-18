@@ -1,0 +1,15 @@
+<h2> Advanced Options </h2>
+
+<input ng-model="numInput" id="choiceContainer"></input>
+<button ng-click=createOptionList(numInput)></button>
+<div ng-repeat="option in optionList">
+      <select name="singleSelect" ng-model="data.singleSelect">
+        <option value="choseDefault" ng-selected="true">Default</option>
+        <option value="choseCon">Consonants</option>
+        <option value="choseVow">Vowels</option>
+        <option value="choseChoose">Choose From</option>
+        <option value="choseExclude">Exclude</option>
+      </select>
+        <input id="lettersChoice"></input>
+        <button id="chooseFrom" value="insert"></button>
+    </div>

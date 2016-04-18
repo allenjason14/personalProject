@@ -2,4 +2,6 @@ angular.module('nameMaker').controller("mainCtrl", function($scope, randomServic
   $scope.nameList = [];
   $scope.savedNames = [];
   $scope.newCategory = [];
+  $scope.optionList = [];
+  $scope.usedNames = [];
 });

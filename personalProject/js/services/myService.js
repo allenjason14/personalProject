@@ -1,6 +1,6 @@
 angular.module("nameMaker").service('randomService', function(){
 
-  var alphabet = [["b", "d", "f", "g", "h", "j", "k", "l", "m", "n", "p", "q", "r", "s", "t", "v", "w", "x", "z"],
+  var alphabet = [["b", "c", "d", "f", "g", "h", "j", "l", "m", "n", "p", "q", "r", "s", "t", "v", "w", "x", "z"],
      ["a", "e", "i", "o", "u", "y"]];
 
    this.randomName = function(num, iter, nameList){
@@ -49,8 +49,8 @@ angular.module("nameMaker").service('randomService', function(){
       return nameList;
     }
     else {
-      alert("Please enter valid numbers.")
+      alert("Please enter valid numbers.");
       return nameList;
     }
-  }
+  };
 });

@@ -13,6 +13,9 @@ angular.module("nameMaker").controller("genCtrl", function($scope, randomService
     if($scope.$parent.savedNames.indexOf($scope.$parent.nameList[num]) === -1){
     $scope.$parent.savedNames.push($scope.$parent.nameList[num]);
     $scope.$parent.nameList.splice(num, 1);
+    setTimeout(function(){
+      $(".chosen-names").draggable();
+    },300);
   }
   else {
     alert("Duplicates Are Not Allowed");

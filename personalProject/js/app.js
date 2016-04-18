@@ -4,16 +4,17 @@ angular.module("nameMaker", ['ui.router'])
       $stateProvider
         .state("home", {
           url: '',
-          templateUrl: "routes/homeTem.html"
+          templateUrl: "routes/generatorTem.html",
+          controller: "genCtrl"
         })
         .state("notes", {
           url: "/notes",
           templateUrl: "routes/notesTem.html",
           controller: "notesCtrl"
         })
-        .state("generator", {
-          url: "/generator",
-          templateUrl: "routes/generatorTem.html",
-          controller: "genCtrl"
+        .state("advanced", {
+          url: "/advanced",
+          templateUrl: "routes/advancedTem.html",
+          controller: "advancedCtrl"
         })
     });

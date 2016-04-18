@@ -1,13 +1,11 @@
-angular.module('nameMaker').service("notesService", function($scope){
+angular.module('nameMaker').service("notesService", function(){
 
-  // $(document).ready(function(){
-  //
-  //   this.dropDown = $('.toggler').live('dblclick',function(){
-  //     $(this).parent().children().toggle();  //swaps the display:none between the two spans
-  //     $(this).parent().parent().find('.toggled_content').slideToggle();  //swap the display of the main content with slide action
-  //
-  //   });
-  //
+  // $(".list-holder").on("mousedown", function(){
+  //   $(".list-hilder").draggable();
   // });
+
+// $('.chosen-names').click(function(){
+//   $(this).draggable();
+// })
 
 });
