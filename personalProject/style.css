@@ -90,3 +90,7 @@ html {
 .notes-visible{
   visibility: hidden;
 }
+
+.notes-button{
+  visibility: hidden;
+}

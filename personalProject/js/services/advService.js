@@ -1,16 +1,7 @@
 angular.module("nameMaker").service("advService", function(){
 
-  // this.hideInputBox = $("#lettersChoice").hide();
-  //
-  // this.inputDropDown = $("#schoolContainer").change(function(){
-  //   var val = $(this).val;
-  //   if (val == "3"){
-  //     $("#lettersChoice").show();
-  //   }
-  //   else{
-  //     $("#lettersChoice").hide();
-  //   }
-  // }).change();
+  var alphabet = [["b", "c", "d", "f", "g", "h", "j", "l", "m", "n", "p", "q", "r", "s", "t", "v", "w", "x", "z"],
+     ["a", "e", "i", "o", "u", "y"]];
 
 
 
@@ -22,7 +13,7 @@ angular.module("nameMaker").service("advService", function(){
             for(var i = 0; i < num; i++) {
               var aNum;
               var selector;
-              if(choiceList[i] === 0){
+              if(choiceList === "choseDefault"){
                 if(this.logTrack[0] === 0 && this.logTrack[1] === 0){
                   aNum = Math.floor(Math.random() * alphabet[1].length);
                   this.newName.push(alphabet[1][aNum]);
@@ -49,18 +40,18 @@ angular.module("nameMaker").service("advService", function(){
                   }
                 }
               }
-              else if (choiceList[i] === 1) {
-                aNum = Math.floor(Math.random() * alphabet[1].length);
-                this.newName.push(alphabet[1][aNum]);
+              else if (choiceList === "choseCon") {
+                aNum = Math.floor(Math.random() * alphabet[0].length);
+                this.newName.push(alphabet[0][aNum]);
                 this.logTrack.push(1);
                 if(this.logTrack.length > 2){
                   this.logTrack.shift();
                 }
               }
 
-              else if (choiceList[i] === 2){
-                aNum = Math.floor(Math.random() * alphabet[0].length);
-                this.newName.push(alphabet[0][aNum]);
+              else if (choiceList === "choseVow"){
+                aNum = Math.floor(Math.random() * alphabet[1].length);
+                this.newName.push(alphabet[1][aNum]);
                 this.logTrack.push(0);
                 if(this.logTrack.length > 2){
                   this.logTrack.shift();
