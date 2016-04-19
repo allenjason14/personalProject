@@ -5,15 +5,15 @@ angular.module("nameMaker").service("advService", function(){
 
 
 
-     this.advancedName = function(num, iter, choiceList, nameList, input){
+     this.advancedName = function(iter, nameData, nameList, input){
         if(!isNaN(num) && !isNaN(iter)) {
           this.newName = [];
           this.logTrack = [];
           for(var j = 0; j < iter; j++){
-            for(var i = 0; i < num; i++) {
+            for(var i = 0; i < nameData.length; i++) {
               var aNum;
               var selector;
-              if(choiceList === "choseDefault"){
+              if(nameData[i] === "choseDefault"){
                 if(this.logTrack[0] === 0 && this.logTrack[1] === 0){
                   aNum = Math.floor(Math.random() * alphabet[1].length);
                   this.newName.push(alphabet[1][aNum]);
@@ -40,7 +40,7 @@ angular.module("nameMaker").service("advService", function(){
                   }
                 }
               }
-              else if (choiceList === "choseCon") {
+              else if (nameData[i] === "choseCon") {
                 aNum = Math.floor(Math.random() * alphabet[0].length);
                 this.newName.push(alphabet[0][aNum]);
                 this.logTrack.push(1);
@@ -49,7 +49,7 @@ angular.module("nameMaker").service("advService", function(){
                 }
               }
 
-              else if (choiceList === "choseVow"){
+              else if (nameData[i] === "choseVow"){
                 aNum = Math.floor(Math.random() * alphabet[1].length);
                 this.newName.push(alphabet[1][aNum]);
                 this.logTrack.push(0);

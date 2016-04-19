@@ -1,6 +1,5 @@
 angular.module("nameMaker").controller("advancedCtrl", function($scope, advService){
-  $scope.nameArr = [];
-  $scope.nameData;
+
   $scope.createOptionList = function(num){
     if(!isNaN(num)){
       $scope.$parent.optionList = [];
@@ -11,11 +10,15 @@ angular.module("nameMaker").controller("advancedCtrl", function($scope, advServi
       alert("Please Enter a Valid Number");
     }
   }
+
   $scope.nameFunc = function(a){
     console.log(a);
   }
+
 $scope.nameData = [];
+$scope.chooseFrom = [];
   setInterval(function(){
-    console.log($scope.nameData)
+    console.log($scope.nameData);
+    console.log($scope.chooseFrom);
   }, 500);
 });

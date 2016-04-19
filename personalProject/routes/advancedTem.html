@@ -1,16 +1,18 @@
 <h2> Advanced Options </h2>
 
 <input ng-model="numInput" id="choiceContainer"></input>
-<button ng-click=createOptionList(numInput)></button>
+<button ng-click=createOptionList(numInput)>Letters</button>
 <div ng-repeat="option in optionList">
       <select name="singleSelect" ng-model="nameData[$index]">
-        <option value="choseDefault" ng-selected="true">Default</option>
+        <option value="choseDefault">Default</option>
         <option value="choseCon">Consonants</option>
         <option value="choseVow">Vowels</option>
         <option value="choseChoose">Choose From</option>
         <option value="choseExclude">Exclude</option>
       </select>
-      <input ng-model="lettersChoice" id="lettersChoice" ng-hide="nameData.singleSelect===choseChoose"></input>
-
+      <div>
+        <input ng-model="chooseFrom[$index]" ng-show="nameData[$index] === 'choseChoose' || nameData[$index] === 'choseExclude'"></input>
+      </div>
     </div>
-    <button id="chooseFrom" ng-click="nameFunc(nameData)">Submit</button>
+
+<button id="chooseFrom" ng-click="nameFunc(nameData)">Submit</button>
