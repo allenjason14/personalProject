@@ -15,6 +15,10 @@ angular.module("nameMaker").controller("advancedCtrl", function($scope, advServi
     console.log(a);
   }
 
+  $scope.advancedName = function(iter, nameData, nameList, input){
+    $scope.advancedList = advService.advancedName(iter, nameData, nameList, input);
+  }
+
 $scope.nameData = [];
 $scope.chooseFrom = [];
   setInterval(function(){

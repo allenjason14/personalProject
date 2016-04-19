@@ -2,7 +2,7 @@
 
 <input ng-model="numInput" id="choiceContainer"></input>
 <button ng-click=createOptionList(numInput)>Letters</button>
-<div ng-repeat="option in optionList">
+<div ng-repeat="option in optionList track by $index">
       <select name="singleSelect" ng-model="nameData[$index]">
         <option value="choseDefault">Default</option>
         <option value="choseCon">Consonants</option>
@@ -15,4 +15,18 @@
       </div>
     </div>
 
-<button id="chooseFrom" ng-click="nameFunc(nameData)">Submit</button>
+<input class="advIter" ng-model="advIter">Iterations</input>
+<button id="chooseFrom" ng-click="advancedName(advIter, nameData, advancedList, chooseFrom)">Submit</button>
+
+<div class="center-holder">
+  <div class="text-holder">
+    <p> This is a paragraph </p>
+  </div>
+  <div class="name-placer">
+    <div class="results" ng-repeat="advance in advancedList track by $index">{{advance}}
+    <button ng-click="moveNames($index)" class="little-button"></button>
+    <button ng-click="removeName($index)" class="little-button"></button>
+    <hr>
+    </div>
+  </div>
+</div>
