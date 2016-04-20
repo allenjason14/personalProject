@@ -7,6 +7,13 @@ angular.module('nameMaker').controller("mainCtrl", function($scope, randomServic
   $scope.usedNames = [];
   $scope.nameData = [];
   $scope.chooseFrom = [];
+  $scope.minionNames = [];
+  $scope.favoriteNames = [];
+  $scope.villainNames = [];
+  $scope.heroNames = [];
+  $scope.maleNames = [];
+  $scope.femaleNames = [];
+  $scope.inUseNames = [];
 
   $(document).on("dblclick", ".chosen-names" ,function(){
     if($(this).children().children(".notes-visible").css("visibility") === "hidden") {

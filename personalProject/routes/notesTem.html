@@ -1,30 +1,38 @@
-<h3>Unused Names:</h3>
-  <div class="unused-names-holder" ng-repeat="saved in savedNames">
-    <span>{{saved}}</span>
+<h2 class="user-notes-head"> User Notes </h2>
+<hr>
+
+<h3 class="user-notes">Unused Names:</h3>
+  <div class="unused-names-holder" ng-repeat="saved in savedNames" >
+    <span class="unused-names">{{saved}}</span>
   <button ng-click="activateNames($index)" class="status-button"></button>
+  <button ng-click="removeSavedName($index)" class="remove-button"></button>
+</div>
+
+<div class="input-holder">
+  <input placeholder="Add a Name" ng-model="newName"class="add-input-box"></input>
+  <button ng-click="addName(newName)" class="status-button"></button>
+  <input placeholder="Add a Category" ng-model="newCat" class="add-input-box"></input>
+  <button ng-click="addCategory(newCat)"class="status-button"></button>
 </div>
 
 <hr>
 
-<h3>Active Names:</h3>
-
-<input placeholder="Add a Name" ng-model="newName"></input>
-  <button ng-click="addName(newName)" class="status-button"></button>
-<input placeholder="Add a Category" ng-model="newCat"></input>
-  <button ng-click="addCategory(newCat)" class="status-button"></button>
+<h3 class="user-notes">Active Names:</h3>
 
 <span class="list-holder">
-  <span class="chosen-names" ng-repeat="used in usedNames track by $index">
-    <div class="draggable-saved">{{used}}
+  <span class="chosen-names" ng-repeat="used in usedNames">
+    <span class="draggable-saved">{{used}}
       <input placeholder="Edits" ng-model="editedName"></input>
-      <button ng-click="editName(editedName, $index)" class="status-button"></button>
-      <input class="notes-visible" ng-model="notes[$index]"></input>
-    </div>
+      <button ng-click="editName(editedName, $index)"class="status-button"></button>
+      <button ng-click="removeSavedName($index)" class="remove-button"></button>
+      <br>
+      <input class="notes-visible"> </input>
+    </span>
 </span>
 </span>
 
 <div class="cat-holder">
-  <div class="cat-names" ng-repeat="cat in newCategory track by $index">{{cat}}
-    <button ng-click="removeCategory($index)" class="remove-button"></index>
-  </div>
+  <span class="cat-names" ng-repeat="cat in newCategory">{{cat}}
+    <button ng-click="removeCategory($index)" class="remove-button" id="cat-button"></index>
+  </span>
 </div>

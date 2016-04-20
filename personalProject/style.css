@@ -146,10 +146,28 @@ body {
   margin-left: 20%;
 }
 
+.unused-names-holder{
+  display: inline-block;
+  margin-left: 7em;
+}
+
+.unused-names{
+margin-left: .5em;
+margin-right: .5em;
+}
+
+.draggable-saved{
+    margin-left: 5em;
+}
+
+.cat-names{
+    margin-left: 5em;
+}
+
 .notes-visible{
   visibility: hidden;
   width:50%;
-  min-width:5em;
+  min-height:5em;
 }
 
 .cat-names{
@@ -157,6 +175,25 @@ body {
   font-weight: bold;
 }
 
+.cat-button{
+  margin-bottom:12px;
+}
 .secDirClass {
   font-family: cursive;
+}
+.user-notes-head {
+  margin-left:3em;
+}
+.user-notes {
+  margin-left:5em;
+}
+
+.input-holder {
+  margin-top: 1em;
+margin-left: 5em;
+}
+
+.active {
+  element:hover, element:active {
+  box-shadow: 0 0 5px gold, inset 0 0 10px gold;
 }

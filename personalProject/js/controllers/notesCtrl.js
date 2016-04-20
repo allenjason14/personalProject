@@ -32,6 +32,9 @@ angular.module("nameMaker").controller('notesCtrl', function($scope, notesServic
 
   $scope.editName = function(input, num){
     $scope.$parent.usedNames.splice(num, 1, input);
+    setTimeout(function(){
+    $(".chosen-names").draggable();
+  },300);
   }
 
   $scope.removeCategory = function(num) {
@@ -45,4 +48,5 @@ angular.module("nameMaker").controller('notesCtrl', function($scope, notesServic
       $(".chosen-names").draggable();
     },300);
   }
+
 });

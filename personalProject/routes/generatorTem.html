@@ -1,6 +1,6 @@
 <div class="center-holder">
   <div class="text-holder">
-    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse viverra elementum enim, et aliquet velit ultrices a. Quisque ultrices, orci a dapibus vulputate, eros arcu convallis velit, eget accumsan arcu leo non est. Curabitur efficitur dui ullamcorper nisl accumsan, id gravida diam viverra. Proin posuere dapibus pharetra. Nam consequat diam augue, non interdum leo porttitor tincidunt. Fusce elementum orci erat, sagittis consectetur nisi dictum ut. Cras euismod, ex sit amet fermentum varius, odio massa facilisis lectus, ut blandit elit quam vel quam. Quisque quam risus, porttitor eu dui sed, congue cursus dui. Ut sed bibendum lacus, et pulvinar dui. Pellentesque eget nulla at ex vehicula sagittis. Cras ut eros faucibus, luctus enim quis, ultrices libero. </p>
+    <p> <strong>Name Generator</strong><hr>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse viverra elementum enim, et aliquet velit ultrices a. Quisque ultrices, orci a dapibus vulputate, eros arcu convallis velit, eget accumsan arcu leo non est. Curabitur efficitur dui ullamcorper nisl accumsan, id gravida diam viverra. Proin posuere dapibus pharetra. Nam consequat diam augue, non interdum leo porttitor tincidunt. Fusce elementum orci erat, sagittis consectetur nisi dictum ut. Cras euismod, ex sit amet fermentum varius, odio massa facilisis lectus, ut blandit elit quam vel quam. Quisque quam risus, porttitor eu dui sed, congue cursus dui. Ut sed bibendum lacus, et pulvinar dui. Pellentesque eget nulla at ex vehicula sagittis. Cras ut eros faucibus, luctus enim quis, ultrices libero. </p>
   </div>
   <div class="name-placer">
     <div class="results" ng-repeat="name in nameList">{{name}}
@@ -16,30 +16,3 @@
   <button ng-click="randomName(letterInput, iterInput, nameList)">Select</button>
   <button ng-click="clearList()">Clear</button>
 </span>
-
-<!-- */
-html,
-body {
-	margin:0;
-	padding:0;
-	height:100%;
-}
-#wrapper {
-	min-height:100%;
-	position:relative;
-}
-#header {
-	background:#ededed;
-	padding:10px;
-}
-#content {
-	padding-bottom:100px; /* Height of the footer element */
-}
-#footer {
-	background:#ffab62;
-	width:100%;
-	height:100px;
-	position:absolute;
-	bottom:0;
-	left:0;
-} -->

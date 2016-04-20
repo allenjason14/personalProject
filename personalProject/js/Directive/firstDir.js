@@ -1,5 +1,7 @@
-angular.module("nameMaker").directive('firstDir', function(){
+angular.module("nameMaker")
+  .directive('firstDir', function(){
+
   return {
-    templateUrl: "firstDirTemplate.html",
-  }
-})
+    templateUrl: "firstDirTemp.html"
+  };
+});

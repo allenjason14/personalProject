@@ -1,5 +1,5 @@
 angular.module('nameMaker').controller("secDirCtrl", function(){
-    $('p').on('click', function(){
-      $('p').addClass("secDirClass");
+    $('button').on('hover', function(){
+      $('this').addClass("active");
     })
 })

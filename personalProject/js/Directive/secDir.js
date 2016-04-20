@@ -1,5 +1,6 @@
 angular.module('nameMaker').directive('secDir', function(){
   return{
-    controller: "secDirCtrl.js",
-  }
+    $('button').on('hover', function(){
+      $('this').addClass("active");
+    })  }
 })
