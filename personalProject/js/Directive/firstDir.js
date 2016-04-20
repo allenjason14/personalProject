@@ -2,6 +2,6 @@ angular.module("nameMaker")
   .directive('firstDir', function(){
 
   return {
-    templateUrl: "firstDirTemp.html"
+    templateUrl: "js/Directive/firstDirTemp.html"
   };
 });
