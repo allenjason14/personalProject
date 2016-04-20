@@ -11,18 +11,37 @@ angular.module("nameMaker").controller("advancedCtrl", function($scope, advServi
     }
   }
 
-  $scope.nameFunc = function(a){
-    console.log(a);
-  }
-
   $scope.advancedName = function(iter, nameData, nameList, input){
     $scope.advancedList = advService.advancedName(iter, nameData, nameList, input);
   }
 
-$scope.nameData = [];
-$scope.chooseFrom = [];
-  setInterval(function(){
-    console.log($scope.nameData);
-    console.log($scope.chooseFrom);
-  }, 500);
+  $scope.clearAdvList = function(){
+    $scope.$parent.advancedList = [];
+    $scope.advancedList = [];
+  }
+
+  $scope.clearChoice = function(){
+    $scope.$parent.nameData = [];
+    $scope.$parent.chooseFrom = [];
+
+  }
+
+  $scope.moveAdvNames = function(num) {
+    if($scope.$parent.savedNames.indexOf($scope.$parent.advancedList[num]) === -1){
+    $scope.$parent.savedNames.push($scope.$parent.advancedList[num]);
+    $scope.$parent.advancedList.splice(num, 1);
+    setTimeout(function(){
+      $(".chosen-names").draggable();
+    },300);
+  }
+  else {
+    alert("Duplicates Are Not Allowed");
+    $scope.$parent.advancedList.splice(num, 1);
+    }
+  }
+
+  $scope.removeAdvName = function(num) {
+    $scope.$parent.advancedList.splice(num, 1);
+  }
+
 });

@@ -1,10 +1,7 @@
-<h2> User Notes </h2>
-<hr>
-
 <h3>Unused Names:</h3>
-  <div class="unused-names-holder" ng-repeat="saved in savedNames" >
+  <div class="unused-names-holder" ng-repeat="saved in savedNames">
     <span>{{saved}}</span>
-  <button ng-click="activateNames($index)"></button>
+  <button ng-click="activateNames($index)" class="status-button"></button>
 </div>
 
 <hr>
@@ -12,25 +9,22 @@
 <h3>Active Names:</h3>
 
 <input placeholder="Add a Name" ng-model="newName"></input>
-  <button ng-click="addName(newName)"></button>
+  <button ng-click="addName(newName)" class="status-button"></button>
 <input placeholder="Add a Category" ng-model="newCat"></input>
-  <button ng-click="addCategory(newCat)"></button>
+  <button ng-click="addCategory(newCat)" class="status-button"></button>
 
 <span class="list-holder">
-  <span class="chosen-names" ng-repeat="used in usedNames">
+  <span class="chosen-names" ng-repeat="used in usedNames track by $index">
     <div class="draggable-saved">{{used}}
       <input placeholder="Edits" ng-model="editedName"></input>
-      <button ng-click="editName(editedName, $index)"></button>
-      <button ng-click="removeSavedName($index)"></button>
-      <input class="notes-visible">
-        <button class="notes-button"></button>
-    </input>
+      <button ng-click="editName(editedName, $index)" class="status-button"></button>
+      <input class="notes-visible" ng-model="notes[$index]"></input>
     </div>
 </span>
 </span>
 
 <div class="cat-holder">
-  <div class="cat-names" ng-repeat="cat in newCategory">{{cat}}
-    <button ng-click="removeCategory($index)"></index>
+  <div class="cat-names" ng-repeat="cat in newCategory track by $index">{{cat}}
+    <button ng-click="removeCategory($index)" class="remove-button"></index>
   </div>
 </div>

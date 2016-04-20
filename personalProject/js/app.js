@@ -1,6 +1,8 @@
 angular.module("nameMaker", ['ui.router'])
     .config(function($urlRouterProvider, $stateProvider){
 
+      $urlRouterProvider.otherwise('');
+
       $stateProvider
         .state("home", {
           url: '',

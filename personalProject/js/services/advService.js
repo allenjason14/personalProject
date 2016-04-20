@@ -3,8 +3,7 @@ angular.module("nameMaker").service("advService", function(){
 
 
      this.advancedName = function(iter, nameData, advancedList, input){
-         if(nameData[i] !== null && nameData.indexOf(null) === -1 && input[i] !== -1) {
-           if(!isNaN(iter)) {
+          if(!isNaN(iter)) {
              this.newName = [];
              this.logTrack = [];
              for(var j = 0; j < iter; j++){
@@ -100,5 +99,4 @@ angular.module("nameMaker").service("advService", function(){
       return advancedList;
     }
   }
-}
 });

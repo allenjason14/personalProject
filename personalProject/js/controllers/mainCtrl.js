@@ -5,6 +5,8 @@ angular.module('nameMaker').controller("mainCtrl", function($scope, randomServic
   $scope.newCategory = [];
   $scope.optionList = [];
   $scope.usedNames = [];
+  $scope.nameData = [];
+  $scope.chooseFrom = [];
 
   $(document).on("dblclick", ".chosen-names" ,function(){
     if($(this).children().children(".notes-visible").css("visibility") === "hidden") {
@@ -14,4 +16,5 @@ angular.module('nameMaker').controller("mainCtrl", function($scope, randomServic
     $(this).children().children(".notes-visible").css({visibility: 'hidden'})
     }
   })
+
 });

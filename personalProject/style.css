@@ -1,6 +1,15 @@
 html {
   background-image: url("images/bgimage.jpg");
-  width: 100%
+  width: 100%;
+  margin:0;
+  padding:0;
+  height:100%;
+}
+
+body {
+  margin:0;
+  padding:0;
+  height:100%;
 }
 
 .header {
@@ -14,7 +23,7 @@ html {
 .header-text{
   margin-top:2em;
   bottom:0;
-  color:gray;
+  color:white;
   font-size: 30pt;
   text-align: center;
 }
@@ -48,11 +57,19 @@ html {
 
 .text-holder {
   min-height: 10em;
+  padding-right: 2em;
   width: 40%;
   display: inline-block;
-  margin-left:5%;
-  margin-right: 7%;
-  border:2px solid black;
+  display: table-cell;
+}
+
+.center-holder {
+  min-height:20em;
+  width:90%;
+  margin-left: auto;
+  margin-right: auto;
+  display:table;
+  margin-top: 3em;
 }
 
 .name-placer {
@@ -61,14 +78,35 @@ html {
   min-height: 10em;
   border: double 3px black;
   margin-right: 5%;
+  margin-top:0;
+  padding-top:0;
+  display:table-cell;
+  background: #d3d3d3;
+  margin-bottom: 2em;
 }
 
-.footer {
+.wrapper {
+  min-height:100%;
+  position:relative;
+}
 
+.content {
+  padding-bottom:5em;
+}
+
+.input-line{
+  margin-top:6em;
+  padding-top:6em;
+  margin-left: 65%;
+}
+.footer {
     width: 100%;
     height: 4em;
     border-top: gray solid .5em;
     background-image: url("images/headerfooterimage.jpg");
+    position:absolute;
+    bottom:0;
+    left:0;
   }
 
 .results{
@@ -78,19 +116,47 @@ html {
   margin-top: 5px;
 }
 
-.little-button{
+.move-button{
   width:1em;
   height: 1em;
+  background-color: green;
 }
-.list-holder {
-  border: 3px solid yellow;
-  z-index: 10;
+.remove-button{
+    width:1em;
+    height:1em;
+    background-color: red;
+}
+
+.status-button {
+  width:1em;
+  height:1em;
+  background-color: blue;
+}
+
+.letter-input{
+  width:3em;
+}
+
+.drop-one{
+  margin-right:5em;
+  float:right;
+}
+
+.drop-two{
+  margin-left: 20%;
 }
 
 .notes-visible{
   visibility: hidden;
+  width:50%;
+  min-width:5em;
 }
 
-.notes-button{
-  visibility: hidden;
+.cat-names{
+  font-size:22pt;
+  font-weight: bold;
+}
+
+.secDirClass {
+  font-family: cursive;
 }
