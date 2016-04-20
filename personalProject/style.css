@@ -194,6 +194,5 @@ margin-left: 5em;
 }
 
 .active {
-  element:hover, element:active {
   box-shadow: 0 0 5px gold, inset 0 0 10px gold;
 }
