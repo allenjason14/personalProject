@@ -2,7 +2,7 @@
 <hr>
 
 <h3 class="user-notes">Unused Names:</h3>
-  <div class="unused-names-holder" ng-repeat="saved in savedNames" >
+  <div class="unused-names-holder" ng-repeat="saved in savedNames track by $index" >
     <span class="unused-names">{{saved}}</span>
   <button ng-click="activateNames($index)" class="status-button"></button>
   <button ng-click="removeSavedName($index)" class="remove-button"></button>
@@ -20,7 +20,7 @@
 <h3 class="user-notes">Active Names:</h3>
 
 <span class="list-holder">
-  <span class="chosen-names" ng-repeat="used in usedNames">
+  <span class="chosen-names" ng-repeat="used in usedNames track by $index">
     <span class="draggable-saved">{{used}}
       <input placeholder="Edits" ng-model="editedName"></input>
       <button ng-click="editName(editedName, $index)"class="status-button"></button>
@@ -32,7 +32,7 @@
 </span>
 
 <div class="cat-holder">
-  <span class="cat-names" ng-repeat="cat in newCategory">{{cat}}
+  <span class="cat-names" ng-repeat="cat in newCategory track by $index">{{cat}}
     <button ng-click="removeCategory($index)" class="remove-button" id="cat-button"></index>
   </span>
 </div>
