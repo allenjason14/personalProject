@@ -23,6 +23,8 @@ angular.module("nameMaker").controller("advancedCtrl", function($scope, advServi
   $scope.clearChoice = function(){
     $scope.$parent.nameData = [];
     $scope.$parent.chooseFrom = [];
+    $scope.$parent.optionList = [];
+
 
   }
 

@@ -1,11 +1,11 @@
 angular.module("nameMaker", ['ui.router'])
     .config(function($urlRouterProvider, $stateProvider){
 
-      $urlRouterProvider.otherwise('');
+      $urlRouterProvider.otherwise('/');
 
       $stateProvider
         .state("home", {
-          url: '',
+          url: '/',
           templateUrl: "routes/generatorTem.html",
           controller: "genCtrl"
         })
