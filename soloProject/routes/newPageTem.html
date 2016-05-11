@@ -1,0 +1,19 @@
+<input ng-model="infoName"></input>
+{{infoName}}
+<textarea class="info-box" cols=20 rows=20 ng-model="history"></textarea>
+{{history}}
+<button ng-click="saveData(history)">history</button>
+
+<textarea class="info-box" cols=20 rows=20 ng-model="skills"></textarea>
+{{skills}}
+<button ng-click="saveData(skills)">skills</button>
+
+<textarea class="info-box" cols=20 rows=20 ng-model="notes"></textarea>
+{{notes}}
+<button ng-click="saveData(notes)">notes</button>
+
+<textarea class="info-box" cols=20 rows=20 ng-model="development"></textarea>
+{{development}}
+<button ng-click="saveData(development)">development</button>
+<br>
+<button ng-click="saveData(infoName, history, skills, notes, development)">So True</button>

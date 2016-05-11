@@ -1,0 +1,17 @@
+<div ng-repeat="story in storiesArr track by $index">
+  {{story}}
+  <h1>{{story.name}}</h1>
+  <hr>
+  <h2>History</h2>
+  <p>{{story.body.going}}</p>
+  <hr>
+  <h2>Development</h2>
+  <p>{{story.body.doing}}</p>
+  <hr>
+  <h2>Skills</h2>
+  <p>{{story.body.feeling}}</p>
+  <hr>
+  <h2>Notes</h2>
+  <p>{{story.body.running}}</p>
+  <hr>
+</div>
